@@ -111,12 +111,12 @@ app.put("/products/:id", async (req, res, next) => {
     const updatedDoc = req.body;
     const product = {
       $set: {
-        name: updatedDoc.updatedName,
-        imageUrl: updatedDoc.updatedImageUrl,
+        productName: updatedDoc.productName,
+        imageUrl: updatedDoc.imageUrl,
         brandName: updatedDoc.updatedBrandName,
-        price: updatedDoc.updatedPrice,
-        description: updatedDoc.updatedDescription,
-        rating: updatedDoc.updatedRating,
+        price: updatedDoc.price,
+        shortDescription: updatedDoc.shortDescription,
+        rating: updatedDoc.rating,
       },
     };
     const id = req.params.id;
